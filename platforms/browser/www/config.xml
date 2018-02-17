@@ -17,7 +17,7 @@
         PhoneGap Team
     </author>
     <content src="index.html" />
-    <splash src="www/splash.png" />
+    <splash src="splash.png" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
