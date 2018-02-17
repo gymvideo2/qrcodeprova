@@ -40,19 +40,20 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
 
-		//checkLanguage();
+		checkLanguage();
 		getWelcome();
 		
-		//window.QRScanner.prepare(onDone); // show the prompt
+		window.QRScanner.prepare(onDone); // show the prompt
         console.log('Received Event: ' + id);
+		window.location = "home.html";
 
     }
 };
 
     function checkLanguage() {
       navigator.globalization.getPreferredLanguage(
-        function (language) {alert('language: ' + language.value + '\n');},
-        function () {alert('Error getting language\n');}
+        function (language) {console.log('language: ' + language.value + '\n');},
+        function () {console.log('Error getting language\n');}
       );
     }
 
@@ -110,8 +111,7 @@ function displayContents(err, text){
 						data = JSON.parse(ajaxRequest.responseText);
 						//alert(data);
 						
-						 //loader_remove();
-
+						
 					
 					}
 					else{
