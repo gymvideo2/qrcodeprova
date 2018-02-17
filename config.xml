@@ -11,7 +11,7 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
 		      <preference name="orientation" value="all" />  
-<splash src="www/splash.png" />
+<splash src="splash.png" />
 
 
     <plugin name="cordova-plugin-camera" source="npm" spec="~2.1.1" />
@@ -33,6 +33,7 @@
       <preference name="ShowSplashScreenSpinner"    value="true" />
 </plugin>      
 <plugin name="cordova-plugin-statusbar" source="npm" spec="~2.1.2" />
+    <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
 	<plugin name="cordova-plugin-qrscanner" source="npm" />
     <platform name="android">
