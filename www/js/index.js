@@ -42,11 +42,12 @@ var app = {
 
 			var sPath=window.location.pathname;
 		var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
-		//window.QRScanner.prepare(onDone); // show the prompt
         console.log('Received Event: ' + id);
 		
 		if (sPage == "index.html"){
 			//se la pagina è lo splash screen carica tutt
+					window.QRScanner.prepare(onDone); // show the prompt
+
 			checkLanguage();
 		getWelcome();
 				window.location = "home.html";
