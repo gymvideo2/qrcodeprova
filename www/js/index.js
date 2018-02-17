@@ -40,14 +40,19 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
 
-		checkLanguage();
-		getWelcome();
-		
-		window.QRScanner.prepare(onDone); // show the prompt
+			var sPath=window.location.pathname;
+		var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
+		//window.QRScanner.prepare(onDone); // show the prompt
         console.log('Received Event: ' + id);
-		window.location = "home.html";
-
-    }
+		
+		if (sPage == "index.html"){
+			//se la pagina è lo splash screen carica tutt
+			checkLanguage();
+		getWelcome();
+				window.location = "home.html";
+			
+		}
+	}
 };
 
     function checkLanguage() {
