@@ -99,9 +99,10 @@ function chBackcolor(color) {
 function onDone(err, status){
   if (err) {
    // here we can handle errors and clean up any loose ends.
-   console.error(err);
+   alert(err);
   }
   if (status.authorized) {
+	  alert("qr scan autorizzato");
     // W00t, you have camera access and the scanner is initialized.
 			document.getElementsByTagName('body')[0].style.backgroundColor="transparent";
 /*
