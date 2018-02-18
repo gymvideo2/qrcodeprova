@@ -55,6 +55,8 @@ var app = {
 		}
 		
 				if (sPage == "codescan.html"){
+						  	alert("sono entrato in codescan");
+
 				document.getElementsByTagName('body')[0].style.backgroundColor="transparent";
 				document.getElementsByTagName('html')[0].style.backgroundColor="transparent";
 			
@@ -95,16 +97,21 @@ function chBackcolor(color) {
 }
 
 function onDone(err, status){
+	alert("entrato nella funzione on done del qr code");
   if (err) {
    // here we can handle errors and clean up any loose ends.
-   console.error(err);
+   alert(err);
   }
   if (status.authorized) {
+	  	alert("qr scanner authorized");
+
     // W00t, you have camera access and the scanner is initialized.
 	window.QRScanner.show();
 	window.QRScanner.scan(displayContents);
 
   } else if (status.denied) {
+	  	  	alert("qr scanner è vietato!");
+
    // The video preview will remain black, and scanning is disabled. We can
    // try to ask the user to change their mind, but we'll have to send them
    // to their device settings with `window.QRScanner.openSettings()`.
