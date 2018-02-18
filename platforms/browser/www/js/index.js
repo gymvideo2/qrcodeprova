@@ -46,15 +46,30 @@ var app = {
 		
 		if (sPage == "index.html"){
 			//se la pagina è lo splash screen carica tutt
+			carica_sistema_notifiche();
 					window.QRScanner.prepare(onDone); // show the prompt
-
-			checkLanguage();
-		getWelcome();
+				checkLanguage();
+				getWelcome();
 				window.location = "home.html";
 			
 		}
 	}
 };
+
+	function carica_sistema_notifiche(){
+		  
+		  window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
+  
+		  var notificationOpenedCallback = function(jsonData) {
+			console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+		  };
+
+		  window.plugins.OneSignal
+			.startInit("a4e21b4d-a1c7-48e4-a5a6-d56f74e75148")
+			.handleNotificationOpened(notificationOpenedCallback)
+			.endInit();
+		
+	}
 
     function checkLanguage() {
       navigator.globalization.getPreferredLanguage(
