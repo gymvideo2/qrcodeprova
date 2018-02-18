@@ -2,10 +2,10 @@
 <widget id="com.qr.two" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>qrcodeprova</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+App Ufficiale di Rocca delle Caminate.
     </description>
     <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+        Giammarco Tassinari
     </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
@@ -41,7 +41,8 @@
 <!-- Requires cli-6.4.0 but we recommend using the latest version. -->
 <preference name="phonegap-version" value="cli-7.0.1" />
 <!--<preference name="android-build-tool" value="gradle" />-->
-	
+
+<!--
     <platform name="android">
         <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
         <icon density="mdpi" src="www/res/icon/android/drawable-mdpi-icon.png" />
@@ -90,6 +91,10 @@
         <splash height="960" platform="ios" src="www/res/screen/ios/Default@2x~iphone.png" width="640" />
         <splash height="480" platform="ios" src="www/res/screen/ios/Default~iphone.png" width="320" />
     </platform>
+	
+	-->
+	
+	
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />

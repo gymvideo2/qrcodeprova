@@ -11,10 +11,10 @@
     </feature>
     <name>qrcodeprova</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+App Ufficiale di Rocca delle Caminate.
     </description>
     <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+        Giammarco Tassinari
     </author>
     <content src="index.html" />
     <splash src="splash.png" />

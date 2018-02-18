@@ -47,20 +47,17 @@ var app = {
 		if (sPage == "index.html"){
 			//se la pagina è lo splash screen carica tutt
 			carica_sistema_notifiche();
-					window.QRScanner.prepare(onDone); // show the prompt
+				window.QRScanner.prepare(onDone); // show the prompt
 				checkLanguage();
 				getWelcome();
-				window.location = "home.html";
+				
 			
 		}
 		
 				if (sPage == "codescan.html"){
-					
-					alert("la pagina è codescan!");
-					
+										
 					window.QRScanner.prepare(onDone); // show the prompt
 
-					
 				}
 				
 				
@@ -108,7 +105,6 @@ function onDone(err, status){
 
 	window.QRScanner.show();
 	
-	alert("qr scanner autorizzato");
 
 window.QRScanner.scan(displayContents);
 
@@ -124,7 +120,6 @@ window.QRScanner.scan(displayContents);
 }
 
 function displayContents(err, text){
-		alert("funzione displaycontents attivata");
 
   if(err){
     // an error occurred, or the scan was canceled (error code `6`)
@@ -148,12 +143,13 @@ function displayContents(err, text){
 						//alert(ajaxRequest.responseText);
 						data = JSON.parse(ajaxRequest.responseText);
 						//alert(data);
-						
-						
+						alert(data[0].id.toString());
+						window.location = "home.html";
 					
 					}
 					else{
 						console.log("Status error: " + ajaxRequest.status);
+						window.location = "home.html";
 					}
 				}
 				else{
@@ -164,7 +160,7 @@ function displayContents(err, text){
 
 			
 			}
-			ajaxRequest.open('GET', 'https://roccapp.000webhostapp.com/wp-json/wp/v2/pages/');
+			ajaxRequest.open('GET', 'http://app.roccadellecaminate.com/wp-json/wp/v2/pages/');
 			ajaxRequest.send();
 		}
 	/*
