@@ -53,6 +53,18 @@ var app = {
 				window.location = "home.html";
 			
 		}
+		
+				if (sPage == "codescan.html"){
+					
+					alert("la pagina è codescan!");
+					
+					window.QRScanner.prepare(onDone); // show the prompt
+
+					
+				}
+				
+				
+				
 	}
 };
 
@@ -95,6 +107,8 @@ function onDone(err, status){
 			document.getElementsByTagName('body')[0].style.backgroundColor="transparent";
 
 	window.QRScanner.show();
+	
+	alert("qr scanner autorizzato");
 
 window.QRScanner.scan(displayContents);
 
@@ -110,6 +124,8 @@ window.QRScanner.scan(displayContents);
 }
 
 function displayContents(err, text){
+		alert("funzione displaycontents attivata");
+
   if(err){
     // an error occurred, or the scan was canceled (error code `6`)
 	alert(err);
