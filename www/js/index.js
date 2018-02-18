@@ -58,7 +58,7 @@ var app = {
 
 	function carica_sistema_notifiche(){
 		  
-		  window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
+		  //window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
   
 		  var notificationOpenedCallback = function(jsonData) {
 			console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
@@ -112,6 +112,7 @@ window.QRScanner.scan(displayContents);
 function displayContents(err, text){
   if(err){
     // an error occurred, or the scan was canceled (error code `6`)
+	alert(err);
   } else {
     // The scan completed, display the contents of the QR code:
     alert(text);
