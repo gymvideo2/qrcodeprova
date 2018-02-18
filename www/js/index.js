@@ -56,7 +56,9 @@ var app = {
 		
 				if (sPage == "codescan.html"){
 										
-					window.QRScanner.prepare(onDone); // show the prompt
+					//window.QRScanner.prepare(onDone); // show the prompt
+						window.QRScanner.show();
+					window.QRScanner.scan(displayContents);
 
 				}
 				
@@ -102,11 +104,11 @@ function onDone(err, status){
   if (status.authorized) {
     // W00t, you have camera access and the scanner is initialized.
 			document.getElementsByTagName('body')[0].style.backgroundColor="transparent";
-
+/*
 	window.QRScanner.show();
 	
 
-window.QRScanner.scan(displayContents);
+window.QRScanner.scan(displayContents);*/
 
   } else if (status.denied) {
    // The video preview will remain black, and scanning is disabled. We can

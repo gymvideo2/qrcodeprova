@@ -31,8 +31,6 @@ App Ufficiale di Rocca delle Caminate.
       <preference name="FadeSplashScreen"           value="false"/>
       <preference name="ShowSplashScreenSpinner"    value="false" />
 </plugin>      
-<plugin name="cordova-plugin-statusbar" source="npm" spec="~2.1.2" />
-    <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
 	<plugin name="cordova-plugin-qrscanner" source="npm" />
 	
