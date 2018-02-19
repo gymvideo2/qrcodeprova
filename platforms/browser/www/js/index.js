@@ -16,6 +16,10 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+
+
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -45,8 +49,8 @@ var app = {
         console.log('Received Event: ' + id);
 		
 		if (sPage == "index.html"){
-			//se la pagina è lo splash screen carica tutt
-			carica_sistema_notifiche();
+				//se la pagina è lo splash screen carica tutt
+				carica_sistema_notifiche();
 				window.QRScanner.prepare(onDone); // show the prompt
 				checkLanguage();
 				getWelcome();
@@ -139,23 +143,23 @@ function displayContents(err, text){
 				if(ajaxRequest.readyState == 4){
 					//the request is completed, now check its status
 					if(ajaxRequest.status == 200){
-						//alert(ajaxRequest.responseText);
+						console.log(ajaxRequest.responseText);
 						data = JSON.parse(ajaxRequest.responseText);
 						//alert(data);
 						
-						window.location = "home.html";
+						window.location = "seleziona_percorso.html";
 					
 					}
 					else{
 						console.log("Status error: " + ajaxRequest.status);
-						window.location = "home.html";
+						window.location = "seleziona_percorso.html";
 					}
 				}
 				else{
 					console.log("Ignored readyState: " + ajaxRequest.readyState);
 				}
 			
-				
+
 
 			
 			}
