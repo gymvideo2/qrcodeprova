@@ -17,7 +17,52 @@
  * under the License.
  */
 
+ 
+ 
+/*
+ARRAY PAGINE DA SCARICARE ALL'AVVIO
+*/
+var vettore_id_pagine = [];
 
+//Location1
+vettore_id_pagine[0] = "6"; //Location 1 ENG
+vettore_id_pagine[1] = "55"; //Location 1 ITA
+
+//Location2
+vettore_id_pagine[2] = "13"; //ENG
+vettore_id_pagine[3] = "66"; //ITA
+
+//Location3
+vettore_id_pagine[4] = "14"; //ENG
+vettore_id_pagine[5] = "69"; //ITA
+
+//Location4
+vettore_id_pagine[6] = "15"; //ENG
+vettore_id_pagine[7] = "70"; //ITA
+
+//Location5
+vettore_id_pagine[8] = "16"; //ENG
+vettore_id_pagine[9] = "71"; //ITA
+
+//Location6
+vettore_id_pagine[10] = "17"; //ENG
+vettore_id_pagine[11] = "72"; //ITA
+
+//Location7
+vettore_id_pagine[12] = "18"; //ENG
+vettore_id_pagine[13] = "73"; //ITA
+
+//Location8
+vettore_id_pagine[14] = "19"; //ENG
+vettore_id_pagine[15] = "74"; //ITA
+
+//Location9
+vettore_id_pagine[16] = "19"; //ENG
+vettore_id_pagine[17] = "75"; //ITA
+
+//Location10
+vettore_id_pagine[18] = "21"; //ENG
+vettore_id_pagine[19] = "56"; //ITA
 
 
 var app = {
@@ -50,8 +95,8 @@ var app = {
 		
 		if (sPage == "index.html"){
 				//se la pagina è lo splash screen carica tutt
-				carica_sistema_notifiche();
-				window.QRScanner.prepare(onDone); // show the prompt
+				//carica_sistema_notifiche();
+				//window.QRScanner.prepare(onDone); // show the prompt
 				checkLanguage();
 				getWelcome();
 				
@@ -66,6 +111,14 @@ var app = {
 					window.QRScanner.prepare(onDone); // show the prompt
 
 				}
+				
+				if (sPage == "location_origini.html"){
+					
+					var p =  document.getElementById("origin");
+					p.innerHTML = localStorage.getItem("18");
+				
+				}
+				
 				
 				
 				
@@ -146,8 +199,9 @@ function displayContents(err, text){
 						console.log(ajaxRequest.responseText);
 						data = JSON.parse(ajaxRequest.responseText);
 						//alert(data);
-						
+						salva_dati(data);
 						window.location = "seleziona_percorso.html";
+						
 					
 					}
 					else{
@@ -163,8 +217,23 @@ function displayContents(err, text){
 
 			
 			}
-			ajaxRequest.open('GET', 'http://app.roccadellecaminate.com/wp-json/wp/v2/pages/');
+			ajaxRequest.open('GET', 'http://app.roccadellecaminate.com/wp-json/wp/v2/pages?per_page=100');
 			ajaxRequest.send();
+		}
+		
+		function salva_dati(data){
+			for (i=0; i < data.length; i++){
+					for (y = 0; y < vettore_id_pagine.length; y++){
+			
+						if (vettore_id_pagine[y].toString() == data[i].id.toString()){
+
+							localStorage.setItem(vettore_id_pagine[y].toString(), data[i].content.rendered.toString());
+							//alert("Salvato " + vettore_id_pagine[y].toString() + " con i dati " + data[i].content.rendered.toString());
+						}
+					}
+			}
+			
+			
 		}
 	/*
 function loader_remove(){
