@@ -95,8 +95,8 @@ var app = {
 		
 		if (sPage == "index.html"){
 				//se la pagina è lo splash screen carica tutt
-				//carica_sistema_notifiche();
-				//window.QRScanner.prepare(onDone); // show the prompt
+				carica_sistema_notifiche();
+				window.QRScanner.prepare(onDone); // show the prompt
 				checkLanguage();
 				getWelcome();
 				
@@ -114,8 +114,15 @@ var app = {
 				
 				if (sPage == "location_origini.html"){
 					
-					var p =  document.getElementById("origin");
-					p.innerHTML = localStorage.getItem("18");
+					for (y = 0; y < 8; y+=2){
+						var p =  document.getElementById(y);
+							//if (vettore_id_pagine[y] == y){
+								p.innerHTML = localStorage.getItem(vettore_id_pagine[y]);
+							//}
+			
+					}
+					
+					
 				
 				}
 				
