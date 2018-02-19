@@ -98,8 +98,8 @@ var app = {
 		
 		if (sPage == "index.html"){
 				//se la pagina è lo splash screen carica tutt
-				carica_sistema_notifiche();
-				window.QRScanner.prepare(onDone); // show the prompt
+				//carica_sistema_notifiche();
+				//window.QRScanner.prepare(onDone); // show the prompt
 				checkLanguage();
 				getWelcome();
 				
@@ -125,7 +125,10 @@ var app = {
 			
 					}
 					
-					
+					// var x = document.querySelectorAll(".carousel-item.slider-fullscreen-image.active");
+					//x[0].classList.remove("active");
+					// var y = document.getElementById("prova_qr");
+					//y.classList.add("active");
 				
 				}
 				
