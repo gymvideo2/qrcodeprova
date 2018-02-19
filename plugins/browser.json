@@ -66,6 +66,9 @@
         },
         "cordova-plugin-qrscanner": {
             "PACKAGE_NAME": "com.qr.two"
+        },
+        "com.telerik.plugins.nativepagetransitions": {
+            "PACKAGE_NAME": "com.qr.two"
         }
     },
     "dependent_plugins": {

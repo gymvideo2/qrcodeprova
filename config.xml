@@ -24,7 +24,8 @@ App Ufficiale di Rocca delle Caminate.
     <plugin name="cordova-plugin-network-information" source="npm" spec="~1.2.0" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
 	<plugin name="cordova-plugin-qrscanner" source="npm" />
-	
+	<plugin name="com.telerik.plugins.nativepagetransitions" source="npm" />
+
 	<gap:plugin name="onesignal-cordova-plugin" spec="^2.1.1" source="npm" />
 
 <!-- Requires cli-6.4.0 but we recommend using the latest version. -->
