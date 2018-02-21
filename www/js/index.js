@@ -98,8 +98,8 @@ var app = {
 		
 		if (sPage == "index.html"){
 				//se la pagina è lo splash screen carica tutt
-				//carica_sistema_notifiche();
-				//window.QRScanner.prepare(onDone); // show the prompt
+				carica_sistema_notifiche();
+				window.QRScanner.prepare(onDone); // show the prompt
 				checkLanguage();
 				getWelcome();
 				
@@ -246,14 +246,14 @@ function displayContents(err, text){
 			
 		}
 		
-		function animazione(){
+		function vai_alla_pagina(pag){
 var options = {
   "direction"      : "up", // 'left|right|up|down', default 'right' (Android currently only supports left and right)
   "duration"       :  600, // in milliseconds (ms), default 400
   "iosdelay"       :   50, // ms to wait for the iOS webview to update before animation kicks in, default 60
   "androiddelay"   :  100,  // same as above but for Android, default 70
   "winphonedelay"  :  150, // same as above but for Windows Phone, default 200
-  "href" : "location_origini.html"
+  "href" : pag
 
 };
 window.plugins.nativepagetransitions.flip(
