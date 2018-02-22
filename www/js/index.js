@@ -246,21 +246,42 @@ function displayContents(err, text){
 			
 		}
 		
-		function vai_alla_pagina(pag){
-var options = {
-  "direction"      : "up", // 'left|right|up|down', default 'right' (Android currently only supports left and right)
-  "duration"       :  600, // in milliseconds (ms), default 400
-  "iosdelay"       :   50, // ms to wait for the iOS webview to update before animation kicks in, default 60
-  "androiddelay"   :  100,  // same as above but for Android, default 70
-  "winphonedelay"  :  150, // same as above but for Windows Phone, default 200
-  "href" : pag
+		function vai_alla_pagina(pag, animazione){
+			
+			switch (animazione){
+				case "flip":
+					var options = {
+					  "direction"      : "up", // 'left|right|up|down', default 'right' (Android currently only supports left and right)
+					  "duration"       :  600, // in milliseconds (ms), default 400
+					  "iosdelay"       :   50, // ms to wait for the iOS webview to update before animation kicks in, default 60
+					  "androiddelay"   :  100,  // same as above but for Android, default 70
+					  "winphonedelay"  :  150, // same as above but for Windows Phone, default 200
+					  "href" : pag
 
-};
-window.plugins.nativepagetransitions.flip(
-  options,
-  function (msg) {console.log("success: " + msg)}, // called when the animation has finished
-  function (msg) {alert("error: " + msg)} // called in case you pass in weird values
-);
+					};
+					window.plugins.nativepagetransitions.flip(
+					  options,
+					  function (msg) {console.log("success: " + msg)}, // called when the animation has finished
+					  function (msg) {alert("error: " + msg)} // called in case you pass in weird values
+					);
+				
+				break;
+				
+				case "fade":
+						var options = {
+						  "duration"       :  600, // in milliseconds (ms), default 400
+						  "iosdelay"       :   50, // ms to wait for the iOS webview to update before animation kicks in, default 60
+						  "androiddelay"   :  100
+						  "href" : pag
+
+						};
+						window.plugins.nativepagetransitions.fade(
+						  options,
+						  function (msg) {console.log("success: " + msg)}, // called when the animation has finished
+						  function (msg) {alert("error: " + msg)} // called in case you pass in weird values
+						);
+				break;
+			}
 			
 		}
 	/*
