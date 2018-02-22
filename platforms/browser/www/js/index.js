@@ -271,7 +271,7 @@ function displayContents(err, text){
 						var options = {
 						  "duration"       :  600, // in milliseconds (ms), default 400
 						  "iosdelay"       :   50, // ms to wait for the iOS webview to update before animation kicks in, default 60
-						  "androiddelay"   :  100
+						  "androiddelay"   :  100,
 						  "href" : pag
 
 						};
