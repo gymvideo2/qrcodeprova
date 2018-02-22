@@ -98,7 +98,7 @@ var app = {
 		
 		if (sPage == "index.html"){
 				//se la pagina è lo splash screen carica tutt
-				carica_sistema_notifiche();
+				//carica_sistema_notifiche();
 				window.QRScanner.prepare(onDone); // show the prompt
 				checkLanguage();
 				getWelcome();
