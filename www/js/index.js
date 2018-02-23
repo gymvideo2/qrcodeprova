@@ -296,7 +296,7 @@ function displayContents(err, text){
 		
 		function vai_allo_slider(id){
 			localStorage.setItem('slider', id.toString());
-				vai_alla_pagina('location_origini.html');	
+				vai_alla_pagina('location_origini.html','fade');	
 		}
 	/*
 function loader_remove(){
