@@ -26,6 +26,7 @@ var vettore_id_pagine = ["55", "6", "66", "13", "69", "14", "70", "15", "71", "1
 
 var CURRENT_LANGUAGE = "";
 var CURRENT_SLIDE = "";
+var CURRENT_PAGE = "";
 
 /*Location1
 vettore_id_pagine[0] = "6"; //Location 1 ENG
@@ -117,6 +118,10 @@ var app = {
 				
 				if (sPage == "location_origini.html"){
 					
+					var current_slider = "div" + localStorage.getItem('slider');
+					alert(current_slider);
+					document.getElementById(current_slider).add('active');
+					
 					for (y = 0; y < vettore_id_pagine.length; y+=2){
 						var p =  document.getElementById(vettore_id_pagine[y]);
 							//if (vettore_id_pagine[y] == y){
@@ -196,7 +201,7 @@ function displayContents(err, text){
   } else {
     // The scan completed, display the contents of the QR code:
 	window.location = "location_origini.html";
-    alert(text);
+    //alert(text);
   }
 }
 
@@ -283,6 +288,17 @@ function displayContents(err, text){
 				break;
 			}
 			
+		}
+		
+		function vai_allo_slider(id, pagina){
+			localStorage.setItem('slider', id.toString());
+			if (pagina == "origini"){
+				vai_alla_pagina('location_origini.html');
+			}
+			else
+			{
+				vai_alla_pagina('location_900.html');
+			}
 		}
 	/*
 function loader_remove(){
