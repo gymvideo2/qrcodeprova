@@ -17,6 +17,9 @@
  * under the License.
  */
 
+     window.onerror = function(message, url, lineNumber) {
+        alert("Error: "+message+" in "+url+" at line "+lineNumber);
+    }
  
  
 /*
@@ -200,8 +203,9 @@ function displayContents(err, text){
 	alert(err);
   } else {
     // The scan completed, display the contents of the QR code:
+	 alert(text);
+
 	vai_allo_slider(text);
-    //alert(text);
   }
 }
 
@@ -290,15 +294,9 @@ function displayContents(err, text){
 			
 		}
 		
-		function vai_allo_slider(id, pagina){
+		function vai_allo_slider(id){
 			localStorage.setItem('slider', id.toString());
-			if (pagina == "origini"){
-				vai_alla_pagina('location_origini.html');
-			}
-			else
-			{
-				vai_alla_pagina('location_900.html');
-			}
+				vai_alla_pagina('location_origini.html');	
 		}
 	/*
 function loader_remove(){
