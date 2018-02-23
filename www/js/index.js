@@ -200,7 +200,7 @@ function displayContents(err, text){
 	alert(err);
   } else {
     // The scan completed, display the contents of the QR code:
-	window.location = "location_origini.html";
+	vai_allo_slider(text);
     //alert(text);
   }
 }
