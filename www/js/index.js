@@ -123,7 +123,6 @@ var app = {
 					
 					var current_slider = "div" + localStorage.getItem('slider');
 					alert(current_slider);
-					document.getElementById(current_slider).add('active');
 					
 					for (y = 0; y < vettore_id_pagine.length; y+=2){
 						var p =  document.getElementById(vettore_id_pagine[y]);
@@ -133,6 +132,8 @@ var app = {
 			
 					}
 					
+					document.getElementById(current_slider).classList.add('active');
+
 					// var x = document.querySelectorAll(".carousel-item.slider-fullscreen-image.active");
 					//x[0].classList.remove("active");
 					// var y = document.getElementById("prova_qr");
