@@ -122,7 +122,7 @@ var app = {
 				if (sPage == "location_origini.html"){
 					
 					var current_slider = "div" + localStorage.getItem('slider');
-					alert(current_slider);
+					//alert(current_slider);
 					
 					for (y = 0; y < vettore_id_pagine.length; y+=2){
 						var p =  document.getElementById(vettore_id_pagine[y]);
@@ -204,7 +204,7 @@ function displayContents(err, text){
 	alert(err);
   } else {
     // The scan completed, display the contents of the QR code:
-	 alert(text);
+	 //alert(text);
 
 	vai_allo_slider(text);
   }
