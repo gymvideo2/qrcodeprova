@@ -131,8 +131,8 @@ var app = {
 							//}
 			
 					}
-					
-					document.getElementById(current_slider).classList.add('active');
+										document.getElementById(current_slider).classList.add('active');
+
 
 					// var x = document.querySelectorAll(".carousel-item.slider-fullscreen-image.active");
 					//x[0].classList.remove("active");
