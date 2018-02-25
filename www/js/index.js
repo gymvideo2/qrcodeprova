@@ -21,7 +21,7 @@
         alert("Error: "+message+" in "+url+" at line "+lineNumber);
     }
  
- 
+
 /*
 ARRAY PAGINE DA SCARICARE ALL'AVVIO
 */
@@ -103,10 +103,10 @@ var app = {
 		if (sPage == "index.html"){
 				//se la pagina è lo splash screen carica tutt
 				//carica_sistema_notifiche();
-				window.QRScanner.prepare(onDone); // show the prompt
+				//window.QRScanner.prepare(onDone); // show the prompt
 				checkLanguage();
 				getWelcome();
-				
+
 			
 		}
 		
@@ -125,20 +125,19 @@ var app = {
 					//alert(current_slider);
 					
 					for (y = 0; y < vettore_id_pagine.length; y+=2){
+					
 						var p =  document.getElementById(vettore_id_pagine[y]);
+							if (CURRENT_LANGUAGE == "en_ENG") { 
+							y -= 1; 
+							}
 							//if (vettore_id_pagine[y] == y){
 								p.innerHTML = localStorage.getItem(vettore_id_pagine[y]);
 							//}
 			
 					}
-										document.getElementById(current_slider).classList.add('active');
+					
+					document.getElementById(current_slider).classList.add('active');
 
-
-					// var x = document.querySelectorAll(".carousel-item.slider-fullscreen-image.active");
-					//x[0].classList.remove("active");
-					// var y = document.getElementById("prova_qr");
-					//y.classList.add("active");
-				
 				}
 				
 				
@@ -164,9 +163,11 @@ var app = {
 
     function checkLanguage() {
       navigator.globalization.getPreferredLanguage(
-        function (language) {console.log('language: ' + language.value + '\n');},
-        function () {console.log('Error getting language\n');}
+        function (language) {localStorage.setItem('language',language.value);},
+        function () {localStorage.setItem('language','it_IT');}	
       );
+	  		CURRENT_LANGUAGE = localStorage.getItem('language');
+
     }
 
 function chBackcolor(color) {
