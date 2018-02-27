@@ -102,9 +102,10 @@ var app = {
 		
 		if (sPage == "index.html"){
 				//se la pagina è lo splash screen carica tutt
+								checkLanguage();
+
 				carica_sistema_notifiche();
 				window.QRScanner.prepare(onDone); // show the prompt
-				checkLanguage();
 				getWelcome();
 
 			
@@ -129,7 +130,7 @@ var app = {
 					
 						var p =  document.getElementById(vettore_id_pagine[y]);
 						
-						if (CURRENT_LANGUAGE != "it-IT") { //se la lingua è inglese procede per ordine dispari nell'array delle pagine
+						if (localStorage.getItem('language') != "it-IT") { 
 							p.innerHTML = localStorage.getItem(vettore_id_pagine[y+1]);			
 						}else{
 							p.innerHTML = localStorage.getItem(vettore_id_pagine[y]);
@@ -167,10 +168,7 @@ var app = {
         function () {localStorage.setItem('language','it-IT');}	//se torna un errore setta italiano 
       );
 	  
-	if (!localStorage.getItem('language')) {localStorage.setItem('language','it-IT');} 
-	  
-	  		CURRENT_LANGUAGE = localStorage.getItem('language');
-			alert(localStorage.getItem('language'));
+	if (!localStorage.getItem('language')) {localStorage.setItem('language','it-IT');} 			
 
     }
 
