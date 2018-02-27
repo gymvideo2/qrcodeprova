@@ -124,10 +124,9 @@ var app = {
 					var current_slider = "div" + localStorage.getItem('slider');
 					//alert(current_slider);
 					
-						if (CURRENT_LANGUAGE == "it-IT") { //se la lingua è inglese procede per ordine dispari nell'array delle pagine
-							y = 0; 
-						}
-						else{
+						var y = 0;
+					
+						if (CURRENT_LANGUAGE != "it-IT") { //se la lingua è inglese procede per ordine dispari nell'array delle pagine
 							y -= 1;
 						}
 					
