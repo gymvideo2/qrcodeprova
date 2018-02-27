@@ -124,11 +124,11 @@ var app = {
 					var current_slider = "div" + localStorage.getItem('slider');
 					//alert(current_slider);
 					
-						if (CURRENT_LANGUAGE == "en_EN") { //se la lingua è inglese procede per ordine dispari nell'array delle pagine
-							y -= 1; 
+						if (CURRENT_LANGUAGE == "it_IT") { //se la lingua è inglese procede per ordine dispari nell'array delle pagine
+							y = 0; 
 						}
 						else{
-							y = 0;
+							y -= 1;
 						}
 					
 					for (y; y < vettore_id_pagine.length; y+=2){

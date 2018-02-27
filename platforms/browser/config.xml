@@ -9,11 +9,11 @@
     <feature name="QRScanner">
         <param name="browser-package" value="QRScanner" />
     </feature>
-    <name>qrcodeprova</name>
+    <name>Rocca delle Caminate</name>
     <description>
 App Ufficiale di Rocca delle Caminate.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
+    <author email="Jump Comm" href="http://jumpcomm.it">
         Giammarco Tassinari
     </author>
     <content src="index.html" />

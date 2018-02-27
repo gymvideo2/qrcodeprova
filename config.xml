@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.qr.two" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>qrcodeprova</name>
+    <name>Rocca delle Caminate</name>
     <description>
 App Ufficiale di Rocca delle Caminate.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
+    <author email="Jump Comm" href="http://jumpcomm.it">
         Giammarco Tassinari
     </author>
     <content src="index.html" />
