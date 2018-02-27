@@ -124,7 +124,7 @@ var app = {
 					var current_slider = "div" + localStorage.getItem('slider');
 					//alert(current_slider);
 					
-						if (CURRENT_LANGUAGE == "it_IT") { //se la lingua è inglese procede per ordine dispari nell'array delle pagine
+						if (CURRENT_LANGUAGE == "it-IT") { //se la lingua è inglese procede per ordine dispari nell'array delle pagine
 							y = 0; 
 						}
 						else{
@@ -166,8 +166,11 @@ var app = {
     function checkLanguage() {
       navigator.globalization.getPreferredLanguage(
         function (language) {localStorage.setItem('language',language.value);},
-        function () {localStorage.setItem('language','it_IT');}	
+        function () {localStorage.setItem('language','it-IT');}	//se torna un errore setta italiano 
       );
+	  
+	if (!localStorage.getItem('language')) {localStorage.setItem('language','it-IT');} 
+	  
 	  		CURRENT_LANGUAGE = localStorage.getItem('language');
 			alert(localStorage.getItem('language'));
 
