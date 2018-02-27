@@ -124,16 +124,18 @@ var app = {
 					var current_slider = "div" + localStorage.getItem('slider');
 					//alert(current_slider);
 					
-					for (y = 0; y < vettore_id_pagine.length; y+=2){
+						if (CURRENT_LANGUAGE == "en_EN") { //se la lingua è inglese procede per ordine dispari nell'array delle pagine
+							y -= 1; 
+						}
+						else{
+							y = 0;
+						}
+					
+					for (y; y < vettore_id_pagine.length; y+=2){
 					
 						var p =  document.getElementById(vettore_id_pagine[y]);
-							if (CURRENT_LANGUAGE == "en_ENG") { 
-							y -= 1; 
-							}
-							//if (vettore_id_pagine[y] == y){
-								p.innerHTML = localStorage.getItem(vettore_id_pagine[y]);
-							//}
-			
+	
+								p.innerHTML = localStorage.getItem(vettore_id_pagine[y]);			
 					}
 					
 					document.getElementById(current_slider).classList.add('active');
@@ -167,6 +169,7 @@ var app = {
         function () {localStorage.setItem('language','it_IT');}	
       );
 	  		CURRENT_LANGUAGE = localStorage.getItem('language');
+			alert(localStorage.getItem('language'));
 
     }
 
