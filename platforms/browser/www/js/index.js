@@ -27,7 +27,6 @@ ARRAY PAGINE DA SCARICARE ALL'AVVIO
 */
 var vettore_id_pagine = ["55", "6", "66", "13", "69", "14", "70", "15", "71", "16", "72", "17", "73", "18", "74", "19", "75", "20", "56", "21", "57", "22"];
 
-var CURRENT_LANGUAGE = "";
 var CURRENT_SLIDE = "";
 var CURRENT_PAGE = "";
 
@@ -138,6 +137,24 @@ var app = {
 					}
 					
 					document.getElementById(current_slider).classList.add('active');
+
+				}
+				
+								
+				if (sPage == "eventi.html"){
+					
+					//aggiorna gli eventi
+					var testo_eventi = "";
+					
+						if (localStorage.getItem('language') != "it-IT") { 
+							testo_eventi = localStorage.getItem('141');
+							document.getElementById(current_slider).classList.add('active');
+
+						}else{
+							testo_eventi = localStorage.getItem('139');
+							document.getElementById(current_slider).classList.add('active');
+
+						}	
 
 				}
 				
