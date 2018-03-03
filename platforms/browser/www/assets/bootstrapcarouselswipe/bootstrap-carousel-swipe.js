@@ -31,7 +31,7 @@
     }
 
     CarouselSwipe.DEFAULTS = {
-        swipe: 50 // percent per second
+        swipe: 80 // percent per second
     }
 
     CarouselSwipe.prototype.touchstart = function(e) {
@@ -71,9 +71,9 @@
 
         var dt = (e.timeStamp - this.startTime) / 1000
         var speed = Math.abs(this.dx / dt) // percent-per-second
-        if (this.dx > 40 || (this.dx > 0 && speed > this.options.swipe)) {
+        if (this.dx > 90 || (this.dx > 0 && speed > this.options.swipe)) {
             this.carousel.prev()
-        } else if (this.dx < -40 || (this.dx < 0 && speed > this.options.swipe)) {
+        } else if (this.dx < -90 || (this.dx < 0 && speed > this.options.swipe)) {
             this.carousel.next();
         } else {
             this.$active

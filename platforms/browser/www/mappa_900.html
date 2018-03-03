@@ -101,21 +101,24 @@
          <div class="mbr-gallery-layout-default">
             <div>
                <div>
-                  <div class="mbr-gallery-item mbr-gallery-item--p2" data-video-url="false" data-tags="P1">
-                     <div href="#lb-gallery2-22" data-slide-to="0" data-toggle="modal"><img src="assets/images/copertura-2000x3500-800x1400.jpg" alt=""><span class="icon-focus"></span></div>
+                  <div class="mbr-gallery-item mbr-gallery-item--p2" data-video-url="false" data-tags="P3">
+                     <div href="#" data-slide-to="0" data-toggle=""><img src="assets/images/copertura-2000x3500-800x1400.jpg" 
+					 usemap="#mappa3"  alt=""><!--<span class="icon-focus"></span>--></div>
                   </div>
                   <div class="mbr-gallery-item mbr-gallery-item--p2" data-video-url="false" data-tags="P2">
-                     <div href="#lb-gallery2-22" data-slide-to="1" data-toggle="modal"><img src="assets/images/pianoprimo-2000x3500-800x1400.jpg" alt=""><span class="icon-focus"></span></div>
+                     <div href="#" data-slide-to="1" data-toggle="modal"><img src="assets/images/pianoprimo-2000x3500-800x1400.jpg" 
+					 usemap="#mappa2" alt=""><!--<span class="icon-focus"></span>--></div>
                   </div>
-                  <div class="mbr-gallery-item mbr-gallery-item--p2" data-video-url="false" data-tags="P3">
-                     <div href="#lb-gallery2-22" data-slide-to="2" data-toggle="modal"><img src="assets/images/pianoterra-2000x3500-800x1400.jpg" alt=""><span class="icon-focus"></span></div>
+                  <div class="mbr-gallery-item mbr-gallery-item--p2" data-video-url="false" data-tags="P1">
+                     <div href="#" data-slide-to="2" data-toggle="modal"><img src="assets/images/pianoterra-2000x3500-800x1400.jpg" 
+					 usemap="#mappa1" alt=""><!--<span class="icon-focus"></span>--></div>
                   </div>
                </div>
             </div>
             <div class="clearfix"></div>
          </div>
       </div>
-      <!-- Lightbox -->
+      <!-- Lightbox lb-gallery2-22 -->
       <div data-app-prevent-settings="" class="mbr-slider modal fade carousel slide" tabindex="-1" data-keyboard="true" data-interval="false" id="lb-gallery2-22">
          <div class="modal-dialog">
             <div class="modal-content">
@@ -132,6 +135,27 @@
       </div>
    </div>
 </div>
+
+<map name="mappa2" id="mappa2">
+    <area alt="19" title="" onclick="vai_allo_slider('64')" href="#" shape="poly" coords="455,2826,627,2922,827,2850,823,2646,707,2546,451,2614" />
+    <area alt="18" title="" onclick="vai_allo_slider('65')" href="#" shape="poly" coords="1199,2878,1323,3018,1571,2946,1643,2678,1315,2614" />
+</map>
+
+<map name="mappa1" id="mappa1">
+    <area alt="15" onclick="alert('ciao')" title="" href="#" shape="poly" coords="1283,1438,1375,1586,1579,1514,1663,1334,1571,1246,1395,1178,1291,1254" />
+    <area alt="12" onclick="alert('ciao')" title="" href="#" shape="poly" coords="642,1528,712,1632,802,1658,992,1616,1032,1490,996,1368,874,1334,720,1330" />
+    <area alt="13" onclick="alert('ciao')" title="" href="#" shape="poly" coords="636,1856,672,1956,774,2016,922,2020,992,1888,996,1744,750,1672" />
+    <area alt="14" onclick="alert('ciao')" title="" href="#" shape="poly" coords="620,2266,730,2338,926,2304,944,2176,936,2068,642,2066,662,2044" />
+    <area alt="16" onclick="alert('ciao')" title="" href="#" shape="poly" coords="1168,2802,1318,2916,1548,2852,1598,2672,1408,2544,1254,2612" />
+    <area alt="17" onclick="alert('ciao')" title="" href="#" shape="poly" coords="564,3184,672,3336,872,3310,966,3100,872,2994,682,2974,618,3002" />
+</map>
+
+<map name="mappa3" id="mappa3">
+    <area alt="23" onclick="alert('ciao')" title="" href="#" shape="poly" coords="391,3155,514,3254,643,3161,688,2990,616,2924,463,2906,373,2951" />
+    <area alt="22" onclick="alert('ciao')" title="" href="#" shape="poly" coords="799,3137,889,3140,991,3080,1057,2942,994,2855,853,2840,739,2846,727,2909" />
+    <area alt="21" onclick="alert('ciao')" title="" href="#" shape="poly" coords="1120,3155,1213,3206,1312,3176,1399,3095,1399,2990,1297,2924,1198,2918,1129,2969,1099,3020" />
+    <area alt="20" onclick="alert('ciao')" title="" href="#" shape="poly" coords="1483,3038,1582,3083,1699,3041,1756,2873,1636,2798,1561,2795,1462,2888" />
+</map>
 
 </section>
 
@@ -164,7 +188,15 @@
   <script src="assets/gallery/player.min.js"></script>
   <script src="assets/gallery/script.js"></script>
   <script src="assets/slidervideo/script.js"></script>
+     <script src="assets/imagemap/imageMapResizer.min.js"></script>
+  <script>
   
+$(document).ready(function() {
+    $('mappa1').imageMapResize();
+	$('mappa2').imageMapResize();
+    $('mappa3').imageMapResize();
+});  
+  </script>
   
 </body>
 </html>

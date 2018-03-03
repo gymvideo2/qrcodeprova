@@ -5930,7 +5930,7 @@ body {
 .cid-qKRj0evTHi .mbr-slider .modal-body .close {
   background: #1b1b1b;
 }
-.cid-qKRj0evTHi .mbr-gallery-item > div::before {
+/*.cid-qKRj0evTHi .mbr-gallery-item > div::before {
   content: '';
   position: absolute;
   left: 0;
@@ -5942,7 +5942,7 @@ body {
   opacity: 0;
   -webkit-transition: 0.2s opacity ease-in-out;
   transition: 0.2s opacity ease-in-out;
-}
+}*/
 .cid-qKRj0evTHi .mbr-gallery-item > div:hover .mbr-gallery-title::before {
   background: transparent !important;
 }
