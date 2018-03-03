@@ -301,7 +301,21 @@ function displayContents(err, text){
 		
 		function vai_allo_slider(id){
 			localStorage.setItem('slider', id.toString());
-				vai_alla_pagina('location_origini.html','fade');	
+			if (inArray(id, vettore_id_pagine_origine)){
+				vai_alla_pagina('location_origini.html','fade');
+			}else{
+				vai_alla_pagina('location_900.html','fade');
+			}
+		}
+		
+	 function inArray(needle,haystack)
+		{
+			var count=haystack.length;
+			for(var i=0;i<count;i++)
+			{
+				if(haystack[i]===needle){return true;}
+			}
+			return false;
 		}
 	/*
 function loader_remove(){
