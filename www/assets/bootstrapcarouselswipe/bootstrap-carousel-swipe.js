@@ -31,7 +31,7 @@
     }
 
     CarouselSwipe.DEFAULTS = {
-        swipe: 70 // percent per second
+        swipe: 80 // percent per second
     }
 
     CarouselSwipe.prototype.touchstart = function(e) {
