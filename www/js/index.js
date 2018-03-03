@@ -132,13 +132,12 @@ var app = {
 					
 						if (localStorage.getItem('language') != "it-IT") { 
 							testo_eventi = localStorage.getItem('141');
-							document.getElementById(current_slider).classList.add('active');
-
 						}else{
 							testo_eventi = localStorage.getItem('139');
-							document.getElementById(current_slider).classList.add('active');
+						}
 
-						}	
+							document.getElementById("testo_eventi").innerHTML = testo_eventi;
+						
 
 				}
 				
