@@ -112,7 +112,7 @@ var app = {
 					for (y = 0; y < vettore_id_pagine_900.length; y+=2){
 					
 						var p =  document.getElementById(vettore_id_pagine_900[y]);
-																	alert(p.toString() + "   " + y.toString());
+					alert(p.toString() + "   " + y.toString() + vettore_id_pagine_900[y].toString());
 
 						if (localStorage.getItem('language') != "it-IT") { 
 							p.innerHTML = localStorage.getItem(vettore_id_pagine_900[y+1]);			
