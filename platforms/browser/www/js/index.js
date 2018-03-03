@@ -18,7 +18,7 @@
  */
 
      window.onerror = function(message, url, lineNumber) {
-        alert("Error: "+message+" in "+url+" at line "+lineNumber);
+        //alert("Error: "+message+" in "+url+" at line "+lineNumber);
     }
  
 
