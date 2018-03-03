@@ -25,51 +25,14 @@
 /*
 ARRAY PAGINE DA SCARICARE ALL'AVVIO
 */
-var vettore_id_pagine = ["55", "6", "66", "13", "69", "14", "70", "15", "71", "16", "72", "17", "73", "18", "74", "19", "75", "20", "56", "21", "57", "22"];
+var vettore_id_pagine_origine = ["55", "6", "66", "13", "69", "14", "70", "15", "71", "16", "72", "17", "73", "18", "74", "19", "75", "20", "56", "21", "57", "22"];
+
+var vettore_id_pagine_900 = ["58", "53", "59", "23", "60", "24", "61", "25", "62", "26", "63", "44", "64", "43", "65", "42", "67", "11", "68", "45", "176", "178", "180", "182"];
+
+
 
 var CURRENT_SLIDE = "";
 var CURRENT_PAGE = "";
-
-/*Location1
-vettore_id_pagine[0] = "6"; //Location 1 ENG
-vettore_id_pagine[1] = "55"; //Location 1 ITA
-
-//Location2
-vettore_id_pagine[2] = "13"; //ENG
-vettore_id_pagine[3] = "66"; //ITA
-
-//Location3
-vettore_id_pagine[4] = "14"; //ENG
-vettore_id_pagine[5] = "69"; //ITA
-
-//Location4
-vettore_id_pagine[6] = "15"; //ENG
-vettore_id_pagine[7] = "70"; //ITA
-
-//Location5
-vettore_id_pagine[8] = "16"; //ENG
-vettore_id_pagine[9] = "71"; //ITA
-
-//Location6
-vettore_id_pagine[10] = "17"; //ENG
-vettore_id_pagine[11] = "72"; //ITA
-
-//Location7
-vettore_id_pagine[12] = "18"; //ENG
-vettore_id_pagine[13] = "73"; //ITA
-
-//Location8
-vettore_id_pagine[14] = "19"; //ENG
-vettore_id_pagine[15] = "74"; //ITA
-
-//Location9
-vettore_id_pagine[16] = "19"; //ENG
-vettore_id_pagine[17] = "75"; //ITA
-
-//Location10
-vettore_id_pagine[18] = "21"; //ENG
-vettore_id_pagine[19] = "56"; //ITA*/
-
 
 var app = {
     // Application Constructor
@@ -125,14 +88,35 @@ var app = {
 					//alert(current_slider);
 					
 					
-					for (y = 0; y < vettore_id_pagine.length; y+=2){
+					for (y = 0; y < vettore_id_pagine_origine.length; y+=2){
 					
-						var p =  document.getElementById(vettore_id_pagine[y]);
+						var p =  document.getElementById(vettore_id_pagine_origine[y]);
 						
 						if (localStorage.getItem('language') != "it-IT") { 
-							p.innerHTML = localStorage.getItem(vettore_id_pagine[y+1]);			
+							p.innerHTML = localStorage.getItem(vettore_id_pagine_origine[y+1]);			
 						}else{
-							p.innerHTML = localStorage.getItem(vettore_id_pagine[y]);
+							p.innerHTML = localStorage.getItem(vettore_id_pagine_origine[y]);
+						}						
+					}
+					
+					document.getElementById(current_slider).classList.add('active');
+
+				}
+
+				if (sPage == "location_900.html"){
+					
+					var current_slider = "div" + localStorage.getItem('slider');
+					//alert(current_slider);
+					
+					
+					for (y = 0; y < vettore_id_pagine_900.length; y+=2){
+					
+						var p =  document.getElementById(vettore_id_pagine_900[y]);
+						
+						if (localStorage.getItem('language') != "it-IT") { 
+							p.innerHTML = localStorage.getItem(vettore_id_pagine_900[y+1]);			
+						}else{
+							p.innerHTML = localStorage.getItem(vettore_id_pagine_900[y]);
 						}						
 					}
 					
@@ -269,7 +253,7 @@ function displayContents(err, text){
 			for (i=0; i < data.length; i++){
 		
 							localStorage.setItem(data[i].id.toString(), data[i].content.rendered.toString());
-							//alert("Salvato " + vettore_id_pagine[y].toString() + " con i dati " + data[i].content.rendered.toString());
+					
 			
 			}
 			
