@@ -91,7 +91,7 @@ var app = {
 					for (y = 0; y < vettore_id_pagine_origine.length; y+=2){
 					
 						var p =  document.getElementById(vettore_id_pagine_origine[y]);
-						
+						alert(p.toString() + "   " + y.toString());
 						if (localStorage.getItem('language') != "it-IT") { 
 							p.innerHTML = localStorage.getItem(vettore_id_pagine_origine[y+1]);			
 						}else{
