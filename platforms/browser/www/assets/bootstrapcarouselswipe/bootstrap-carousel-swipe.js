@@ -77,8 +77,8 @@
             this.carousel.next();
         } else {
             this.$active
-                //.one($.support.transition.end, function () {
-                  //  all.removeClass('prev next')
+                .one($.support.transition.end, function () {
+                    all.removeClass('prev next')
                 })
                 .emulateTransitionEnd(this.$active.css('transition-duration').slice(0, -1) * 1000)
         }
