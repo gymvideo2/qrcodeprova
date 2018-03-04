@@ -232,6 +232,12 @@ function displayContents(err, text){
 					
 					}
 					else{
+						if (!localStorage.getItem('60')) //se non c'è connessione con il server e non sono salvati elementi in localstorage, allora esce!
+						{
+	
+							alert("Il primo accesso deve essere effettuato con una connessione ad internet!");
+							navigator.app.exitApp(); 
+						}
 						console.log("Status error: " + ajaxRequest.status);
 						window.location = "seleziona_percorso.html";
 					}
