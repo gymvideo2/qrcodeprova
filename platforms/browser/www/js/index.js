@@ -72,7 +72,9 @@ var app = {
 				getWelcome();
 
 			
-		}
+		if (sPage == "seleziona_percorso.html"){
+				  getDeviceProperty();			
+		}		
 		
 				if (sPage == "codescan.html"){
 
@@ -338,6 +340,9 @@ function displayContents(err, text){
 				if(int1<5){
 						if (screen.width < 330 ){
 							alert("qua bisogna applicare i CSS pezza!");
+							document.getElementById("contenitore").style.zIndex = "1000";
+							document.getElementById("contenitore").style.marginBottom = "150px";
+							document.getElementById("contenitore").style.overflow = "visible";
 						}
 				}
 			
