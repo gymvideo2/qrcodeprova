@@ -65,8 +65,10 @@ var app = {
 		if (sPage == "index.html"){
 				//se la pagina è lo splash screen carica tutt
 				checkLanguage();
-				//carica_sistema_notifiche();
-				//window.QRScanner.prepare(onDone); // show the prompt
+				carica_sistema_notifiche();
+				window.QRScanner.prepare(onDone); // show the prompt
+				  getDeviceProperty();
+
 				getWelcome();
 
 			
@@ -321,6 +323,28 @@ function displayContents(err, text){
 			}
 			return false;
 		}
+		
+		   function getDeviceProperty(){
+     var deviceOS  = device.platform;  //fetch the device operating system
+     var deviceOSVersion = device.version;  //fetch the device OS version
+          alert("Device OS: " + deviceOS); 
+          alert("Device OS Version: " + deviceOSVersion); 
+			alert(screen.height);
+			alert(screen.width);
+
+			if (deviceOS.indexOf('Android') >= 0) {
+				alert("its an android");
+				int1 = parseInt(deviceOSVersion);
+				if(int1<5){
+						if (screen.width < 330 ){
+							alert("qua bisogna applicare i CSS pezza!");
+						}
+				}
+			
+			}
+
+			                     
+}
 	/*
 function loader_remove(){
 		//rimuove il loader 
