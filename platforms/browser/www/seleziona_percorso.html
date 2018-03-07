@@ -22,7 +22,7 @@
   
   <style>
   
-  @media only screen and (max-width:33.75em) { 
+  @media only screen and (max-width:300px) { 
 	#contenitore{
 		z-index:1000; 
 		margin-bottom:150px; 
@@ -41,6 +41,8 @@
     window.onerror = function(message, url, lineNumber) {
         console.log("Error: "+message+" in "+url+" at line "+lineNumber);
     }
+	
+
 </script>
     
 
@@ -103,7 +105,7 @@
     </div>
     
     <div class="container" id="contenitore" style="">
-        <div class="media-container-row">
+        <div class="media-container-row" id="DIV2">
             <div class="card p-3 col-6 col-sm-3 col-xs-3">
                 <div onclick="vai_alla_pagina('indice_origini.html','fade')" class="card-wrapper">
                     <div class="card-img">
@@ -147,7 +149,7 @@
      
 
     <div class="container">
-        <div class="media-container-row">
+        <div class="media-container-row" id="DIV1">
             <div class="mbr-text  col-12 col-sm-12 col-xs-12 mbr-fonts-style display-7">
                 Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. 
             </div>
@@ -164,6 +166,10 @@
   <script src="assets/smoothscroll/smooth-scroll.js"></script>
   <script src="assets/theme/js/script.js"></script>
   
+  <script>
+
+</script>
+  </script>
   
 </body>
 </html>
