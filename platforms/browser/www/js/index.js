@@ -67,8 +67,6 @@ var app = {
 				checkLanguage();
 				carica_sistema_notifiche();
 				window.QRScanner.prepare(onDone); // show the prompt
-				  getDeviceProperty();
-
 				getWelcome();
 
 			
