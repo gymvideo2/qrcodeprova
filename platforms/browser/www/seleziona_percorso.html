@@ -39,7 +39,7 @@
 <!-- Google Analytics -->
 <script type="text/javascript">
     window.onerror = function(message, url, lineNumber) {
-        console.log("Error: "+message+" in "+url+" at line "+lineNumber);
+        alert("Error: "+message+" in "+url+" at line "+lineNumber);
     }
 	
 
@@ -167,7 +167,28 @@
   <script src="assets/theme/js/script.js"></script>
   
   <script>
+  getDeviceProperty();
+   function getDeviceProperty(){
+     var deviceOS  = device.platform;  //fetch the device operating system
+     var deviceOSVersion = device.version;  //fetch the device OS version
+          alert("Device OS: " + deviceOS); 
+          alert("Device OS Version: " + deviceOSVersion); 
+			alert(screen.height);
+			alert(screen.width);
 
+			if (deviceOS.indexOf('Android') >= 0) {
+				alert("its an android");
+				int1 = parseInt(deviceOSVersion);
+				if(int1<4){
+						if (screen.width < 330 ){
+							alert("qua bisogna applicare i CSS pezza!");
+						}
+				}
+			
+			}
+
+			                     
+}
 </script>
   </script>
   
