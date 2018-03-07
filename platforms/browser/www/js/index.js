@@ -68,7 +68,7 @@ var app = {
 				carica_sistema_notifiche();
 				window.QRScanner.prepare(onDone); // show the prompt
 				getWelcome();
-
+		}
 			
 		if (sPage == "seleziona_percorso.html"){
 				  getDeviceProperty();			
