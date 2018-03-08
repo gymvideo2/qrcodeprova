@@ -327,17 +327,17 @@ function displayContents(err, text){
 		   function getDeviceProperty(){
      var deviceOS  = device.platform;  //fetch the device operating system
      var deviceOSVersion = device.version;  //fetch the device OS version
-          alert("Device OS: " + deviceOS); 
-          alert("Device OS Version: " + deviceOSVersion); 
-			alert(screen.height);
-			alert(screen.width);
+          //alert("Device OS: " + deviceOS); 
+          //alert("Device OS Version: " + deviceOSVersion); 
+			//alert(screen.height);
+			//alert(screen.width);
 
 			if (deviceOS.indexOf('Android') >= 0) {
-				alert("its an android");
+				//alert("its an android");
 				int1 = parseInt(deviceOSVersion);
 				if(int1<5){
 						if (screen.width < 330 ){
-							alert("qua bisogna applicare i CSS pezza!");
+							//alert("qua bisogna applicare i CSS pezza!");
 							document.getElementById("contenitore").style.zIndex = "1000";
 							document.getElementById("contenitore").style.marginBottom = "150px";
 							document.getElementById("contenitore").style.overflow = "visible";
