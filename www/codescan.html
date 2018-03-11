@@ -1,7 +1,28 @@
 
+<style>
+.btn {
+  background: #d93455;
+  background-image: -webkit-linear-gradient(top, #d93455, #b82b42);
+  background-image: -moz-linear-gradient(top, #d93455, #b82b42);
+  background-image: -ms-linear-gradient(top, #d93455, #b82b42);
+  background-image: -o-linear-gradient(top, #d93455, #b82b42);
+  background-image: linear-gradient(to bottom, #d93455, #b82b42);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  text-align:center;
+}
+</style>
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
         app.initialize();
     </script>
+
+<div class="btn" onclick="onBackKeyDown()">Torna indietro</div>

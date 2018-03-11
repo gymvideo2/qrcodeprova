@@ -18,7 +18,7 @@
  */
 
      window.onerror = function(message, url, lineNumber) {
-        alert("Error: "+message+" in "+url+" at line "+lineNumber);
+       // alert("Error: "+message+" in "+url+" at line "+lineNumber);
     }
  
 
@@ -201,6 +201,20 @@ function onDone(err, status){
   }
 }
 
+function onBackKeyDown() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i) || userAgent.match(/iPod/i)) {
+        // IOS DEVICE
+        history.go(-1);
+    } else if (userAgent.match(/Android/i)) {
+        // ANDROID DEVICE
+        navigator.app.backHistory();
+    } else {
+        // EVERY OTHER DEVICE
+        history.go(-1);
+    }
+}
+
 function displayContents(err, text){
 
   if(err){
@@ -209,8 +223,100 @@ function displayContents(err, text){
   } else {
     // The scan completed, display the contents of the QR code:
 	 //alert(text);
-
-	vai_allo_slider(text);
+		switch (text){
+			case "1":
+			vai_allo_slider("55");	
+			break;
+			
+			case "2":
+			vai_allo_slider("66");	
+			break;
+			
+			case "3":
+			vai_allo_slider("69");	
+			break;
+			
+			case "4":
+			vai_allo_slider("70");	
+			break;
+			
+			case "5":
+			vai_allo_slider("71");	
+			break;
+			
+			case "6":
+			vai_allo_slider("72");	
+			break;
+			
+			case "7":
+			vai_allo_slider("73");	
+			break;
+			
+			case "8":
+			vai_allo_slider("74");	
+			break;
+			
+			case "9":
+			vai_allo_slider("75");	
+			break;
+			
+			case "10":
+			vai_allo_slider("56");	
+			break;
+			
+			case "11":
+			vai_allo_slider("57");	
+			break;
+			
+			case "12":
+			vai_allo_slider("58");	
+			break;
+			
+			case "13":
+			vai_allo_slider("59");	
+			break;
+			
+			case "14":
+			vai_allo_slider("60");	
+			break;
+			
+			case "15":
+			vai_allo_slider("61");	
+			break;
+			
+			case "16":
+			vai_allo_slider("62");	
+			break;
+			
+			case "17":
+			vai_allo_slider("63");	
+			break;
+			
+			case "18":
+			vai_allo_slider("64");	
+			break;
+			
+			case "19":
+			vai_allo_slider("65");	
+			break;
+			
+			case "20":
+			vai_allo_slider("67");	
+			break;
+			
+			case "21":
+			vai_allo_slider("68");	
+			break;
+			
+			case "22":
+			vai_allo_slider("176");	
+			break;
+			
+			case "23":
+			vai_allo_slider("180");	
+			break;
+			
+		}
   }
 }
 
