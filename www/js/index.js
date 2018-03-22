@@ -72,7 +72,7 @@ var app = {
 		}
 			
 		if (sPage == "seleziona_percorso.html"){
-				  getDeviceProperty();			
+				 // getDeviceProperty();			
 		}		
 		
 				if (sPage == "codescan.html"){

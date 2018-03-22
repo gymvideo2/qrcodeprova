@@ -9,6 +9,8 @@ App Ufficiale di Rocca delle Caminate.
     </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
+	<preference name="orientation" value="portrait" />
+
 		     <!-- <preference name="orientation" value="portrait" />  -->
 
 
