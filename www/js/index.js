@@ -66,8 +66,8 @@ var app = {
 		if (sPage == "index.html"){
 				//se la pagina è lo splash screen carica tutt
 				checkLanguage();
-				carica_sistema_notifiche();
-				window.QRScanner.prepare(onDone); // show the prompt
+				//carica_sistema_notifiche();
+				//window.QRScanner.prepare(onDone); // show the prompt
 				getWelcome();
 		}
 			
