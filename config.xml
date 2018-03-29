@@ -11,7 +11,7 @@ App Ufficiale di Rocca delle Caminate.
     <preference name="DisallowOverscroll" value="true" />
 	<preference name="orientation" value="portrait" />
       <preference name="AndroidPersistentFileLocation" value="Compatibility" />
-
+<preference name="UseSwiftLanguageVersion" value="3.0" />
 		     <!-- <preference name="orientation" value="portrait" />  -->
 
 
