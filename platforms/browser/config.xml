@@ -17,7 +17,7 @@ App Ufficiale di Rocca delle Caminate.
         Giammarco Tassinari
     </author>
     <content src="index.html" />
-    <gap:plugin name="onesignal-cordova-plugin" source="npm" />
+    <gap:plugin name="onesignal-cordova-plugin" source="npm" spec="~2.1.0" />
     <icon src="icon.png" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
