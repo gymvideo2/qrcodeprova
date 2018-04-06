@@ -18,7 +18,7 @@
  */
 
      window.onerror = function(message, url, lineNumber) {
-       alert("Error: "+message+" in "+url+" at line "+lineNumber);
+      // alert("Error: "+message+" in "+url+" at line "+lineNumber);
     }
  
 
@@ -473,30 +473,28 @@ function loader_remove(){
 var media = null;
 
 function playMP3(nomefile) {
-	alert("avvio la guida mp3");
-    var mp3URL = getMediaURL(nomefile);
-    var media = new Media(mp3URL, null, mediaError);
-	media.setVolume(1.0);
-    media.play();
-}
+	
+	if (media == null)
+		var mp3URL = getMediaURL(nomefile);
+		media = new Media(mp3URL, null, mediaError);
+		media.setVolume(1.0);
+		media.play();
 
-function playMp3Mild() {
-    var mp3URL = getMediaURL("sounds/button-1.mp3");
-    var media = new Media(mp3URL, null, mediaError);
-	media.setVolume(0.1);
-    media.play();
+	}
 }
 
 function pausemp3(){
 	   if (media) {
-          my_media.pause();
+          media.pause();
        }
 }
 
-function playRemoteFile() {
-	var media = new Media("http://SERVER_IP:PORT/media/test.mp3");
-	media.setVolume(0.1);
-    media.play();
+function stopmp3(){
+	   if (media) {
+          media.stop();
+       }
+	      media = null;
+
 }
 
 function getMediaURL(s) {
@@ -506,6 +504,6 @@ function getMediaURL(s) {
 }
 
 function mediaError(e) {
-    alert('Media Error');
-    alert(JSON.stringify(e));
+   // alert('Media Error');
+    // alert(JSON.stringify(e));
 }
