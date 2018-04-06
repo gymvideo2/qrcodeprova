@@ -470,6 +470,8 @@ function loader_remove(){
 }
 */
 
+var media = null;
+
 function playMP3(nomefile) {
     var mp3URL = getMediaURL("sounds/" + nomefile);
     var media = new Media(mp3URL, null, mediaError);
@@ -482,6 +484,12 @@ function playMp3Mild() {
     var media = new Media(mp3URL, null, mediaError);
 	media.setVolume(0.1);
     media.play();
+}
+
+function pausemp3(){
+	   if (media) {
+                my_media.pause();
+       }
 }
 
 function playRemoteFile() {
