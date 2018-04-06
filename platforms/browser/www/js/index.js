@@ -473,6 +473,7 @@ function loader_remove(){
 var media = null;
 
 function playMP3(nomefile) {
+	alert("avvio la guida mp3");
     var mp3URL = getMediaURL("sounds/" + nomefile);
     var media = new Media(mp3URL, null, mediaError);
 	media.setVolume(1.0);
