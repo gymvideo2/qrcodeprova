@@ -478,9 +478,8 @@ function playMP3(nomefile) {
 		var mp3URL = getMediaURL(nomefile);
 		media = new Media(mp3URL, null, mediaError);
 		media.setVolume(1.0);
-		media.play();
-
 	}
+	media.play();
 }
 
 function pausemp3(){
