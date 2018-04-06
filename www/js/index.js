@@ -475,8 +475,10 @@ var current_file = null;
 
 function playMP3(nomefile) {
 	
-	if (nomefile != current_file){
-		media = null;
+	if (media){
+		if (nomefile != current_file){
+			stopmp3();
+		}
 	}
 	
 	if (media == null){
