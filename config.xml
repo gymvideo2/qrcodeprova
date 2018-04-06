@@ -37,6 +37,9 @@ App Ufficiale di Rocca delle Caminate.
   <preference name="BackgroundColor" value="0x00000000" />
 
   <icon src="icon.png" />
+  
+<preference name="SplashScreenDelay" value="0"/>
+<preference name="FadeSplashScreenDuration" value="0"/>
 
 
     <platform name="android">
