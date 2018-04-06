@@ -471,13 +471,23 @@ function loader_remove(){
 */
 
 var media = null;
+var current_file = null;
 
 function playMP3(nomefile) {
+	
+	if (nomefile != current_file){
+		media = null;
+	}
 	
 	if (media == null){
 		var mp3URL = getMediaURL(nomefile);
 		media = new Media(mp3URL, null, mediaError);
 		media.setVolume(1.0);
+		current_file = nomefile; 
+
+	}
+	else{
+		//media.stop();
 	}
 	media.play();
 }
