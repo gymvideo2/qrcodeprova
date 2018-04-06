@@ -474,7 +474,7 @@ var media = null;
 
 function playMP3(nomefile) {
 	
-	if (media == null)
+	if (media == null){
 		var mp3URL = getMediaURL(nomefile);
 		media = new Media(mp3URL, null, mediaError);
 		media.setVolume(1.0);
