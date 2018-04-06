@@ -474,7 +474,7 @@ var media = null;
 
 function playMP3(nomefile) {
 	alert("avvio la guida mp3");
-    var mp3URL = getMediaURL("sounds/" + nomefile);
+    var mp3URL = getMediaURL(nomefile);
     var media = new Media(mp3URL, null, mediaError);
 	media.setVolume(1.0);
     media.play();
@@ -500,6 +500,7 @@ function playRemoteFile() {
 }
 
 function getMediaURL(s) {
+
     if(device.platform.toLowerCase() === "android") return "/android_asset/www/" + s;
     return s;
 }
