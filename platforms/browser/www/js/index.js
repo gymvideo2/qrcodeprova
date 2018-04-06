@@ -18,7 +18,7 @@
  */
 
      window.onerror = function(message, url, lineNumber) {
-       // alert("Error: "+message+" in "+url+" at line "+lineNumber);
+       alert("Error: "+message+" in "+url+" at line "+lineNumber);
     }
  
 
@@ -488,7 +488,7 @@ function playMp3Mild() {
 
 function pausemp3(){
 	   if (media) {
-                my_media.pause();
+          my_media.pause();
        }
 }
 
