@@ -39,7 +39,7 @@ App Ufficiale di Rocca delle Caminate.
   <icon src="icon.png" />
 
 <preference name="SplashScreenDelay" value="0"/>
-<preference name="swift-version" value="3.2" />
+<preference name="swift-version" value="3.0" />
 
 
 <preference name="FadeSplashScreenDuration" value="0"/>
