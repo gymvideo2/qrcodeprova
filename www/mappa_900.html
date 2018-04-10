@@ -94,24 +94,24 @@
       <div class="mbr-gallery-filter container gallery-filter-active">
 <ul buttons="0">
          <li class="mbr-gallery-filter-all"><a class="btn btn-md btn-primary-outline display-7" style="display:none;" href="">Tutto</a></li>
-         <li><a id="attivo"  class="btn btn-md btn-primary-outline display-7">P1</a></li><li><a class="btn btn-md btn-primary-outline display-7 active"  href="">P2</a></li><li><a  class="btn btn-md btn-primary-outline display-7" href="">P3</a></li></ul>
+         <li><a id="attivo"  class="btn btn-md btn-primary-outline display-7">Piano Terra</a></li><li><a class="btn btn-md btn-primary-outline display-7"  href="">Piano Primo</a></li><li><a  class="btn btn-md btn-primary-outline display-7" href="">Copertura</a></li></ul>
       </div>
       <!-- Gallery -->
       <div class="mbr-gallery-row">
          <div class="mbr-gallery-layout-default">
             <div>
                <div>
-                  <div id="nascosto1" class="mbr-gallery-item mbr-gallery-item--p2" data-video-url="false" data-tags="P3">
+                  <div id="nascosto1" class="mbr-gallery-item mbr-gallery-item--p2" data-video-url="false" data-tags="Copertura">
                      <div  data-slide-to="0" data-toggle="modal"><img src="assets/images/copertura-2000x3500-800x1400.jpg" 
 					   alt="" usemap="#mappa3"><!--<span class="icon-focus"></span>--></div>
                   </div>
-                  <div id="nascosto2" class="mbr-gallery-item mbr-gallery-item--p2" data-video-url="false" data-tags="P2">
+                  <div id="nascosto2" class="mbr-gallery-item mbr-gallery-item--p2" data-video-url="false" data-tags="Piano Primo">
                      <div  data-slide-to="1" data-toggle="modal"><img src="assets/images/pianoprimo-2000x3500-800x1400.jpg" 
 					 usemap="#mappa2" alt=""/>
 	
 					 <!--<span class="icon-focus"></span>--></div>
                   </div>
-                  <div class="mbr-gallery-item mbr-gallery-item--p2" data-video-url="false" data-tags="P1">
+                  <div class="mbr-gallery-item mbr-gallery-item--p2" data-video-url="false" data-tags="Piano Terra">
                      <div  data-slide-to="2" data-toggle="modal"><img src="assets/images/pianoterra-2000x3500-800x1400.jpg" 
 					 alt="" usemap="#mappa1"   ><!--<span class="icon-focus"></span>--></div>
                   </div>
@@ -209,6 +209,11 @@ $(document).ready(function() {
 
 	$('#nascosto1').addClass('mbr-gallery-item__hided');
 	$('#nascosto2').addClass('mbr-gallery-item__hided');
+	
+			
+				$('a:contains("Piano Terra")').addClass('active');
+
+
 
 });  
 
