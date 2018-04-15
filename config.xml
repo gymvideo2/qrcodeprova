@@ -9,41 +9,27 @@ App Ufficiale di Rocca delle Caminate.
     </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
-	<preference name="orientation" value="portrait" />
-      <preference name="AndroidPersistentFileLocation" value="Compatibility" />
-<preference name="UseSwiftLanguageVersion" value="3.0" />
-		     <!-- <preference name="orientation" value="portrait" />  -->
-
-
+    <preference name="orientation" value="portrait" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    <preference name="UseSwiftLanguageVersion" value="3.0" />
     <plugin name="cordova-plugin-camera" source="npm" spec="~2.1.1" />
     <plugin name="cordova-plugin-media-capture" source="npm" spec="~1.2.0" />
     <plugin name="cordova-plugin-console" source="npm" spec="~1.0.2" />
     <plugin name="cordova-plugin-device" source="npm" spec="~1.1.1" />
     <plugin name="cordova-plugin-dialogs" source="npm" spec="~1.2.0" />
-    <plugin name="cordova-plugin-file" source="npm" spec="~4.1.1" />
     <plugin name="cordova-plugin-globalization" source="npm" spec="~1.0.3" />
     <plugin name="cordova-plugin-inappbrowser" source="npm" spec="~1.3.0" />
     <plugin name="cordova-plugin-media" source="npm" spec="~2.4.0" />
     <plugin name="cordova-plugin-network-information" source="npm" spec="~1.2.0" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
-	<!--<plugin name="cordova-plugin-qrscanner" source="npm" />-->
-	<plugin name="com.telerik.plugins.nativepagetransitions" source="npm" />
-<!----><!---->
-	<gap:plugin name="onesignal-cordova-plugin" source="npm" spec="~2.1.0" />
-
-<!-- Requires cli-6.4.0 but we recommend using the latest version. -->
-<preference name="phonegap-version" value="cli-7.0.1" />
-<preference name="android-build-tool" value="gradle" />
-  <preference name="BackgroundColor" value="0x00000000" />
-
-  <icon src="icon.png" />
-
-<preference name="SplashScreenDelay" value="0"/>
-
-
-<preference name="FadeSplashScreenDuration" value="0"/>
-
-
+    <plugin name="com.telerik.plugins.nativepagetransitions" source="npm" />
+    <gap:plugin name="onesignal-cordova-plugin" source="npm" spec="~2.1.0" />
+    <preference name="phonegap-version" value="cli-7.0.1" />
+    <preference name="android-build-tool" value="gradle" />
+    <preference name="BackgroundColor" value="0x00000000" />
+    <icon src="icon.png" />
+    <preference name="SplashScreenDelay" value="0" />
+    <preference name="FadeSplashScreenDuration" value="0" />
     <platform name="android">
         <icon density="mdpi" src="www/res/icon/android/drawable-mdpi-icon.png" />
         <icon density="hdpi" src="www/res/icon/android/drawable-hdpi-icon.png" />
@@ -67,7 +53,7 @@ App Ufficiale di Rocca delle Caminate.
         <icon height="152" platform="ios" src="www/res/icon/ios/icon-76@2x.png" width="152" />
         <icon height="29" platform="ios" src="www/res/icon/ios/icon-small.png" width="29" />
         <icon height="58" platform="ios" src="www/res/icon/ios/icon-small@2x.png" width="58" />
-		        <splash height="1136" platform="ios" src="www/res/screen/ios/Default-568h@2x~iphone.png" width="640" />
+        <splash height="1136" platform="ios" src="www/res/screen/ios/Default-568h@2x~iphone.png" width="640" />
         <splash height="1334" platform="ios" src="www/res/screen/ios/Default-667h.png" width="750" />
         <splash height="2208" platform="ios" src="www/res/screen/ios/Default-736h.png" width="1242" />
         <splash height="1242" platform="ios" src="www/res/screen/ios/Default-Landscape-736h.png" width="2208" />
@@ -77,12 +63,7 @@ App Ufficiale di Rocca delle Caminate.
         <splash height="1024" platform="ios" src="www/res/screen/ios/Default-Portrait~ipad.png" width="768" />
         <splash height="960" platform="ios" src="www/res/screen/ios/Default@2x~iphone.png" width="640" />
         <splash height="480" platform="ios" src="www/res/screen/ios/Default~iphone.png" width="320" />
-
     </platform>
-	
-	
-	
-	
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -97,4 +78,7 @@ App Ufficiale di Rocca delle Caminate.
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+    <plugin name="cordova-plugin-file" spec="~4.0.0" />
+    <plugin name="onesignal-cordova-plugin" spec="~2.1.0" />
+    <plugin name="cordova-plugin-qrscanner" spec="~2.5.0" />
 </widget>
