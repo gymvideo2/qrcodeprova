@@ -34,9 +34,6 @@
     "cordova-plugin-dialogs": {
       "PACKAGE_NAME": "com.qr.two"
     },
-    "cordova-plugin-file": {
-      "PACKAGE_NAME": "com.qr.two"
-    },
     "cordova-plugin-geolocation": {
       "PACKAGE_NAME": "com.qr.two"
     },
@@ -44,12 +41,6 @@
       "PACKAGE_NAME": "com.qr.two"
     },
     "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "com.qr.two"
-    },
-    "cordova-plugin-media": {
-      "PACKAGE_NAME": "com.qr.two"
-    },
-    "cordova-plugin-media-capture": {
       "PACKAGE_NAME": "com.qr.two"
     },
     "cordova-plugin-network-information": {
@@ -72,10 +63,22 @@
     },
     "cordova-plugin-qrscanner": {
       "PACKAGE_NAME": "com.qr.two"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.qr.two"
+    },
+    "cordova-plugin-media-capture": {
+      "PACKAGE_NAME": "com.qr.two"
+    },
+    "cordova-plugin-media": {
+      "PACKAGE_NAME": "com.qr.two"
     }
   },
   "dependent_plugins": {
     "cordova-plugin-swift-support": {
+      "PACKAGE_NAME": "com.qr.two"
+    },
+    "cordova-plugin-compat": {
       "PACKAGE_NAME": "com.qr.two"
     }
   }
