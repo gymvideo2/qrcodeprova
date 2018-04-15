@@ -1,0 +1,82 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "com.telerik.plugins.nativepagetransitions": {
+      "PACKAGE_NAME": "com.qr.two"
+    },
+    "cordova-plugin-battery-status": {
+      "PACKAGE_NAME": "com.qr.two"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.qr.two"
+    },
+    "cordova-plugin-console": {
+      "PACKAGE_NAME": "com.qr.two"
+    },
+    "cordova-plugin-contacts": {
+      "PACKAGE_NAME": "com.qr.two"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.qr.two"
+    },
+    "cordova-plugin-device-motion": {
+      "PACKAGE_NAME": "com.qr.two"
+    },
+    "cordova-plugin-device-orientation": {
+      "PACKAGE_NAME": "com.qr.two"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.qr.two"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.qr.two"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.qr.two"
+    },
+    "cordova-plugin-globalization": {
+      "PACKAGE_NAME": "com.qr.two"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.qr.two"
+    },
+    "cordova-plugin-media": {
+      "PACKAGE_NAME": "com.qr.two"
+    },
+    "cordova-plugin-media-capture": {
+      "PACKAGE_NAME": "com.qr.two"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.qr.two"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.qr.two"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.qr.two"
+    },
+    "cordova-plugin-vibration": {
+      "PACKAGE_NAME": "com.qr.two"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.qr.two"
+    },
+    "onesignal-cordova-plugin": {
+      "PACKAGE_NAME": "com.qr.two"
+    },
+    "cordova-plugin-qrscanner": {
+      "PACKAGE_NAME": "com.qr.two"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-swift-support": {
+      "PACKAGE_NAME": "com.qr.two"
+    }
+  }
+}
