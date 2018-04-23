@@ -18,7 +18,7 @@
  */
 
      window.onerror = function(message, url, lineNumber) {
-      alert("Error: "+message+" in "+url+" at line "+lineNumber);
+      //alert("Error: "+message+" in "+url+" at line "+lineNumber);
     }
  
 
@@ -182,7 +182,7 @@ function chBackcolor(color) {
 function onDone(err, status){
   if (err) {
    // here we can handle errors and clean up any loose ends.
-   alert(JSON.stringify(err));
+   //alert(JSON.stringify(err));
   }
   else if (status.authorized) {
 
@@ -348,7 +348,7 @@ function displayContents(err, text){
 						if (!localStorage.getItem('60')) //se non c'è connessione con il server e non sono salvati elementi in localstorage, allora esce!
 						{
 	
-							alert("Il primo accesso deve essere effettuato con una connessione ad internet!");
+							//alert("Il primo accesso deve essere effettuato con una connessione ad internet!");
 							navigator.app.exitApp(); 
 						}
 						console.log("Status error: " + ajaxRequest.status);
