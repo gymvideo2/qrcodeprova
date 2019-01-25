@@ -518,3 +518,21 @@ function mediaError(e) {
    // alert('Media Error');
     // alert(JSON.stringify(e));
 }
+
+
+
+function localizzazione_menu(){
+	
+	if (localStorage.getItem('language') != "it-IT") { 
+			var y = document.getElementById("seleziona_percorso");
+			y.innerHTML = "SELECT PATH";
+			var y = document.getElementById("eventi");
+			y.innerHTML = "EVENTS";
+			var y = document.getElementById("contatti");
+			y.innerHTML = "CONTACTS";
+
+			
+
+
+	}			
+}
