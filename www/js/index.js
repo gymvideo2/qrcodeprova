@@ -528,17 +528,41 @@ function mediaError(e) {
 
 
 function localizzazione_menu(){
-	
-	if (localStorage.getItem('language') != "it-IT") { 
-			var y = document.getElementById("seleziona_percorso");
-			y.innerHTML = "SELECT PATH";
-			var y = document.getElementById("eventi");
-			y.innerHTML = "EVENTS";
-			var y = document.getElementById("contatti");
-			y.innerHTML = "CONTACTS";
+	try 
+	{
+		if (localStorage.getItem('language') != "it-IT") { 
+				var y = document.getElementById("seleziona_percorso");
+				y.innerHTML = "SELECT PATH";
+				var y = document.getElementById("eventi");
+				y.innerHTML = "EVENTS";
+				var y = document.getElementById("contatti");
+				y.innerHTML = "CONTACTS";
+				var y = document.getElementById("contatti_footer");
+				y.innerHTML = "Contacts";
+				var y = document.getElementById("nome_rocca");
+				y.innerHTML = "Rocca delle Caminate - Forlì-Cesena Technopole";
 
-			
+								var y = document.getElementById("percorso_900");
+				y.innerHTML = "'THE ORIGINS' PATH";
+								var y = document.getElementById("percorso_origini");
+				y.innerHTML = "'THE ORIGINS' PATH";
+								var y = document.getElementById("torna_indietro");
+				y.innerHTML = "Go Back";
+								var y = document.getElementById("desc_tour");
+				y.innerHTML = "A fascinating virtual tour to discover the ancient history of Rocca delle Caminate.";
+								var y = document.getElementById("piano_terra");
+				y.innerHTML = "First floor";
+				
+				var y = document.getElementById("piano_terra");
+					y.innerHTML = "Ground floor";
+					var y = document.getElementById("piano_primo");
+				y.innerHTML = "First floor";
+var y = document.getElementById("copertura");
+				y.innerHTML = "Roof";
 
-
-	}			
+		}		
+	}
+	catch(e){
+		console.log("something went wrong!");
+	}
 }
