@@ -531,34 +531,91 @@ function localizzazione_menu(){
 	try 
 	{
 		if (localStorage.getItem('language') != "it-IT") { 
+		
 				var y = document.getElementById("seleziona_percorso");
+				
+				if (y){
 				y.innerHTML = "SELECT PATH";
+				}
+				
 				var y = document.getElementById("eventi");
+				
+				if (y){
 				y.innerHTML = "EVENTS";
+				}
+				
+				
 				var y = document.getElementById("contatti");
+	
+				if (y){
 				y.innerHTML = "CONTACTS";
+				}
+				
 				var y = document.getElementById("contatti_footer");
+				
+				if (y){
 				y.innerHTML = "Contacts";
+				}
+				
+			
 				var y = document.getElementById("nome_rocca");
+				
+				if (y){
 				y.innerHTML = "Rocca delle Caminate - Forlì-Cesena Technopole";
-
-								var y = document.getElementById("percorso_900");
+				}
+				
+			
+				var y = document.getElementById("percorso_900");
+				
+				if (y){
+				y.innerHTML = "'THE 1900s' PATH";
+				}
+				
+				var y = document.getElementById("percorso_origini");
+				
+				if (y){
 				y.innerHTML = "'THE ORIGINS' PATH";
-								var y = document.getElementById("percorso_origini");
-				y.innerHTML = "'THE ORIGINS' PATH";
-								var y = document.getElementById("torna_indietro");
+				}
+				
+		
+				var y = document.getElementById("torna_indietro");
+				
+				if (y){
 				y.innerHTML = "Go Back";
-								var y = document.getElementById("desc_tour");
+				}
+				
+			
+				var y = document.getElementById("desc_tour");
+				
+				if (y){
 				y.innerHTML = "A fascinating virtual tour to discover the ancient history of Rocca delle Caminate.";
-								var y = document.getElementById("piano_terra");
-				y.innerHTML = "First floor";
+				}
 				
 				var y = document.getElementById("piano_terra");
-					y.innerHTML = "Ground floor";
-					var y = document.getElementById("piano_primo");
+				
+				if (y){
 				y.innerHTML = "First floor";
-var y = document.getElementById("copertura");
+				}
+			
+				var y = document.getElementById("piano_terra");
+				
+				if (y){
+				y.innerHTML = "Ground floor";
+				}
+				
+				var y = document.getElementById("piano_primo");
+				
+				if (y){
+				y.innerHTML = "First floor";
+				}
+				
+				
+				var y = document.getElementById("copertura");
+				
+				if (y){
 				y.innerHTML = "Roof";
+				}
+				
 
 		}		
 	}
