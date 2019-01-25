@@ -18,7 +18,7 @@
  */
 
      window.onerror = function(message, url, lineNumber) {
-      // alert("Error: "+message+" in "+url+" at line "+lineNumber);
+       alert("Error: "+message+" in "+url+" at line "+lineNumber);
     }
  
 
@@ -67,7 +67,6 @@ var app = {
 				//se la pagina è lo splash screen carica tutt
 				checkLanguage();
 				carica_sistema_notifiche();
-				localizzazione_menu();
 				window.QRScanner.prepare(onDone); // show the prompt
 				getWelcome();
 		}
@@ -82,6 +81,12 @@ var app = {
 				document.getElementsByTagName('html')[0].style.backgroundColor="transparent";
 			
 					window.QRScanner.prepare(onDone); // show the prompt
+
+				}
+				
+				if (sPage == "contatti.html"){
+					
+					localizzazione_menu();
 
 				}
 				
