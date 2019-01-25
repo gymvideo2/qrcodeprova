@@ -616,10 +616,16 @@ function localizzazione_menu(){
 				y.innerHTML = "Roof";
 				}
 				
+						var y = document.getElementById("torna_indice");
+				
+				if (y){
+				y.innerHTML = "BACK TO INDEX";
+				}
+				
 
 		}		
 	}
 	catch(e){
-		console.log("something went wrong!");
+		alert("something went wrong!");
 	}
 }
