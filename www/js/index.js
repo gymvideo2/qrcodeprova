@@ -67,6 +67,7 @@ var app = {
 				//se la pagina è lo splash screen carica tutt
 				checkLanguage();
 				carica_sistema_notifiche();
+				localizzazione_menu();
 				window.QRScanner.prepare(onDone); // show the prompt
 				getWelcome();
 		}
