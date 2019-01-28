@@ -534,7 +534,7 @@ function localizzazione_menu(){
 		
 				
 				var y = document.getElementsByClassName("btn btn-md btn-primary-outline display-7");
-				
+				var x = document.getElementsByClassName("mbr-gallery-item mbr-gallery-item--p2");
 				
 				if (y[1]){
 					
@@ -542,6 +542,10 @@ function localizzazione_menu(){
 					y[2].innerText = "First Floor";
 					y[3].innerText = "Ground Floor";
 					
+					
+					x[1].dataset.tags = "Ground Floor";
+					x[2].dataset.tags = "First Floor";
+					x[0].dataset.tags = "Roof";
 				}
 				
 				var y = document.getElementById("seleziona_percorso");
