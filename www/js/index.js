@@ -536,7 +536,7 @@ function localizzazione_menu(){
 				var y = document.getElementsByClassName("btn btn-md btn-primary-outline display-7");
 				var x = document.getElementsByClassName("mbr-gallery-item mbr-gallery-item--p2");
 				
-				if (y[1]){
+				if (y[1] && x[1]){
 					
 					y[1].innerText = "Roof";
 					y[2].innerText = "First Floor";
