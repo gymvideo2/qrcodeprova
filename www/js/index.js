@@ -533,12 +533,15 @@ function localizzazione_menu(){
 		if (localStorage.getItem('language') != "it-IT") { 
 		
 				
-				var y = document.getElementById("selettore_piano_ita");
-				var x = document.getElementById("selettore_piano_eng");
+				var y = document.getElementsByClassName("btn btn-md btn-primary-outline display-7");
 				
-				if (y && x){
-				y.style.display = "none";
-				x.style.display = "visible";
+				
+				if (y[1]){
+					
+					y[1].innerText = "Roof";
+					y[2].innerText = "First Floor";
+					y[3].innerText = "Ground Floor";
+					
 				}
 				
 				var y = document.getElementById("seleziona_percorso");
