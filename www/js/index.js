@@ -532,6 +532,15 @@ function localizzazione_menu(){
 	{
 		if (localStorage.getItem('language') != "it-IT") { 
 		
+				
+				var y = document.getElementById("selettore_piano_ita");
+				var x = document.getElementById("selettore_piano_eng");
+				
+				if (y && x){
+				y.style.display = "none";
+				x.style.display = "visible";
+				}
+				
 				var y = document.getElementById("seleziona_percorso");
 				
 				if (y){
@@ -622,6 +631,12 @@ function localizzazione_menu(){
 				y.innerHTML = "BACK TO INDEX";
 				}
 				
+				var y = document.getElementById("mappa");
+				
+				if (y){
+				y.innerHTML = "GO TO THE MAP";
+				}
+				
 				/* parte dei titoli ORIGINE*/
 				
 				
@@ -681,7 +696,69 @@ function localizzazione_menu(){
 				}
 				
 								/* parte dei titoli 900*/
+								
+									var y = document.getElementById("idea_progetto_restauro");
+				
+				if (y){
+				y.innerHTML = "The 1900s: the restoration idea and the project";
+				}
+				
+					var y = document.getElementById("inizio_lavori_restauro");
+				
+				if (y){
+				y.innerHTML = "The 1900s: the beginning of restoration works";
+				}
+				
+					var y = document.getElementById("vita_rocca_restaurata");
+				
+				if (y){
+				y.innerHTML = "The 1900s: life in the restored castle";
+				}
+				
+					var y = document.getElementById("fasti_abbandono");
+				
+				if (y){
+				y.innerHTML = "The 1900s: from splendour to neglect";
+				}
+				
+					var y = document.getElementById("dopoguerra");
+				
+				if (y){
+				y.innerHTML = "The 1900s: the post-war era";
+				}
+				
+					var y = document.getElementById("salone_cimeli");
+				
+				if (y){
+				y.innerHTML = "The great hall with memorabilia";
+				}
+				
+					var y = document.getElementById("restauro_recente_i");
+				
+				if (y){
+				y.innerHTML = "The recent restoration (part I)";
+				}
 
+				
+					var y = document.getElementById("restauro_recente_ii");
+				
+				if (y){
+				y.innerHTML = "The recent restoration (part II)";
+				}
+				
+				
+					var y = document.getElementById("torre");
+				
+				if (y){
+				y.innerHTML = "The Tower";
+				}
+				
+				
+					var y = document.getElementById("faro_propaganda");
+				
+				if (y){
+				y.innerHTML = "The lighthouse and the propaganda";
+				}
 
 		}		
 	}
