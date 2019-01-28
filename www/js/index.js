@@ -622,6 +622,66 @@ function localizzazione_menu(){
 				y.innerHTML = "BACK TO INDEX";
 				}
 				
+				/* parte dei titoli ORIGINE*/
+				
+				
+					var y = document.getElementById("oratorio");
+				
+				if (y){
+				y.innerHTML = "'Santa Maria del Soccorso' Oratory";
+				}
+				
+					var y = document.getElementById("santuario");
+				
+				if (y){
+				y.innerHTML = "The Sanctuary of Our Lady of Consolation";
+				}
+				
+					var y = document.getElementById("caserma");
+				
+				if (y){
+				y.innerHTML = "The Carabinieri Barracks";
+				}
+				
+					var y = document.getElementById("territorio_parco");
+				
+				if (y){
+				y.innerHTML = "The territory and the park";
+				}
+				
+					var y = document.getElementById("origini_insediamento");
+				
+				if (y){
+				y.innerHTML = "Origins of the settlement";
+				}
+				
+					var y = document.getElementById("dodicesimo");
+				
+				if (y){
+				y.innerHTML = "12th and 13th century";
+				}
+				
+					var y = document.getElementById("quattordicesimo");
+				
+				if (y){
+				y.innerHTML = "The 14th and 15th century";
+				}
+				
+					var y = document.getElementById("sedicesimo");
+				
+				if (y){
+				y.innerHTML = "From the 16th to the 19th century";
+				}
+				
+				
+					var y = document.getElementById("origini_nome");
+				
+				if (y){
+				y.innerHTML = "The origins of the name";
+				}
+				
+								/* parte dei titoli 900*/
+
 
 		}		
 	}
